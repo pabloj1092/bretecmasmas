@@ -10,8 +10,11 @@
 
 USING_NS_CC;
 
+
 Scene* GraphBack::createScene()
 {
+
+    
     // 'scene' is an autorelease object
     auto scene = Scene::create();
     
@@ -71,15 +74,23 @@ bool GraphBack::init()
     // add the label as a child to this layer
     this->addChild(label, 1);
     
-    // add 
-    sprite = Sprite::create("Pinkie_Pie.png");
-    sprite->setPosition(this->getBoundingBox().getMidX(), this->getBoundingBox().getMidY());
-    sprite2 = Sprite::create("Pinkie_Pie.png");
-    sprite2->setPosition(sprite->getBoundingBox().getMidX() + sprite->getBoundingBox().size.width, sprite->getBoundingBox().getMidY());
+    // add
+    bgnd = Sprite::create("Pinkie_Pie.png");
+    bgnd->setAnchorPoint(Vec2(0.5, 0.5));
+    bgnd->setPosition(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y);
+    grass1 = Sprite::create("bluegrass.png");
+    grass1->setPosition(this->getBoundingBox().getMidX(), origin.y + grass1->getContentSize().height/2 );
+    grass2 = Sprite::create("bluegrass.png");
+    grass2->setPosition(this->getBoundingBox().getMidX() + grass1->getBoundingBox().size.width, origin.y + grass2->getContentSize().height/2 );
+    grass3 = Sprite::create("bluegrass.png");
+    grass3->setPosition(this->getBoundingBox().getMidX() + 2*grass2->getBoundingBox().size.width, origin.y + grass3->getContentSize().height/2 );
 
-    this->addChild(sprite, 0);
-    this->addChild(sprite2, 0);
+    this->addChild(bgnd, 0);
+    this->addChild(grass1, 0);
+    this->addChild(grass2, 0);
+    this->addChild(grass3, 0);
 
+    
     this->scheduleUpdate();
     
     // position the sprite on the center of the screen
@@ -96,6 +107,10 @@ bool GraphBack::init()
 }
 
 
+
+
+
+
 void GraphBack::menuCloseCallback(Ref* pSender)
 {
     Director::getInstance()->end();
@@ -107,14 +122,22 @@ void GraphBack::menuCloseCallback(Ref* pSender)
 
 
 void GraphBack::update(float delta){
-    auto position = sprite->getPosition();
+    auto position = grass1->getPosition();
     position.x -= 250 * delta;
-    if (position.x  < 0 - (sprite->getBoundingBox().size.width / 2))
-        position.x = this->getBoundingBox().getMaxX() + sprite->getBoundingBox().size.width/2;
-    sprite->setPosition(position);
-    auto position2 = sprite2->getPosition();
+    if (position.x  < 0 - (grass1->getBoundingBox().size.width / 2))
+        position.x = this->getBoundingBox().getMaxX() + grass1->getBoundingBox().size.width/2;
+    grass1->setPosition(position);
+    
+    auto position2 = grass2->getPosition();
     position2.x -= 250 * delta;
-    if (position2.x  < 0 - (sprite2->getBoundingBox().size.width / 2))
-        position2.x = this->getBoundingBox().getMaxX() + sprite2->getBoundingBox().size.width/2;
-    sprite2->setPosition(position2);
+    if (position2.x  < 0 - (grass2->getBoundingBox().size.width / 2))
+        position2.x = this->getBoundingBox().getMaxX() + grass2->getBoundingBox().size.width/2;
+    grass2->setPosition(position2);
+    
+    auto position3 = grass3->getPosition();
+    position3.x -= 250 * delta;
+    if (position3.x  < 0 - (grass3->getBoundingBox().size.width / 2))
+        position3.x = this->getBoundingBox().getMaxX() + grass3->getBoundingBox().size.width/2;
+    grass3->setPosition(position3);
+
 }

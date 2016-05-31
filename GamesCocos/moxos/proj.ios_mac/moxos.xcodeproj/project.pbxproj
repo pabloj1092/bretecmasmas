@@ -71,6 +71,8 @@
 		ED545A7E1B68A1FA00C3958E /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = ED545A7D1B68A1FA00C3958E /* libiconv.dylib */; };
 		FA3C91231CDEF43F004DC02F /* Pinkie_Pie.png in Resources */ = {isa = PBXBuildFile; fileRef = FA3C91221CDEF43F004DC02F /* Pinkie_Pie.png */; };
 		FA3C912F1CDEF696004DC02F /* GraphBack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA3C912D1CDEF696004DC02F /* GraphBack.cpp */; };
+		FABF9ABD1CED30750049E338 /* bluegrass.png in Resources */ = {isa = PBXBuildFile; fileRef = FABF9ABC1CED30750049E338 /* bluegrass.png */; };
+		FABF9AC01CED41FB0049E338 /* pedobearspri.png in Resources */ = {isa = PBXBuildFile; fileRef = FABF9ABF1CED41FB0049E338 /* pedobearspri.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -168,6 +170,8 @@
 		FA3C91221CDEF43F004DC02F /* Pinkie_Pie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Pinkie_Pie.png; sourceTree = "<group>"; };
 		FA3C912D1CDEF696004DC02F /* GraphBack.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GraphBack.cpp; sourceTree = "<group>"; };
 		FA3C912E1CDEF696004DC02F /* GraphBack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphBack.h; sourceTree = "<group>"; };
+		FABF9ABC1CED30750049E338 /* bluegrass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bluegrass.png; sourceTree = "<group>"; };
+		FABF9ABF1CED41FB0049E338 /* pedobearspri.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pedobearspri.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -289,10 +293,12 @@
 		46880B7519C43A67006E1F66 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				FABF9ABF1CED41FB0049E338 /* pedobearspri.png */,
 				521A8EA819F11F5000D177D7 /* fonts */,
 				3EACC98E19EE6D4300EB3C5E /* res */,
 				46880B7619C43A67006E1F66 /* CloseNormal.png */,
 				FA3C91221CDEF43F004DC02F /* Pinkie_Pie.png */,
+				FABF9ABC1CED30750049E338 /* bluegrass.png */,
 				46880B7719C43A67006E1F66 /* CloseSelected.png */,
 				46880B7A19C43A67006E1F66 /* HelloWorld.png */,
 			);
@@ -456,6 +462,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FABF9ABD1CED30750049E338 /* bluegrass.png in Resources */,
 				5087E78117EB970100C73F5D /* Icon-120.png in Resources */,
 				5087E78617EB970100C73F5D /* Icon-76.png in Resources */,
 				5087E77F17EB970100C73F5D /* Default@2x.png in Resources */,
@@ -478,6 +485,7 @@
 				5087E78417EB970100C73F5D /* Icon-57.png in Resources */,
 				5087E77E17EB970100C73F5D /* Default.png in Resources */,
 				521A8E6419F0C34300D177D7 /* Default-667h@2x.png in Resources */,
+				FABF9AC01CED41FB0049E338 /* pedobearspri.png in Resources */,
 				46880B7B19C43A67006E1F66 /* CloseNormal.png in Resources */,
 				50EF629717ECD46A001EB2F8 /* Icon-58.png in Resources */,
 			);

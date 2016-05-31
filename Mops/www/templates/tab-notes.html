@@ -1,0 +1,14 @@
+<ion-view view-title="Notes">
+  <ion-nav-buttons side="right">
+      <button class="right button button-icon icon ion-plus" ng-click="insert()"></button>
+  </ion-nav-buttons>
+  <ion-content>
+    <ion-list>
+      <ion-item ng-repeat="note in notes" href="#/tab/notes/{{note.id}}">
+        <h2>{{note.note_name}}</h2>
+        <ion-option-button class="button-assertive" ng-click="remove(note)">
+        </ion-option-button>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
