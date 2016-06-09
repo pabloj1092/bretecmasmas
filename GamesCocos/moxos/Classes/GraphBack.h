@@ -27,9 +27,10 @@ public:
     
     void update(float) override;
     
-    void ccTouchesEnded(cocos2d::CCSet* touches, cocos2d::CCEvent
+    void ccTouchesEnded(cocos2d::CCSet* touches, cocos2d::CCEvent);
     
 private:
+    cocos2d::Sprite* amySprite;
     cocos2d::Sprite* bgnd;
     cocos2d::Sprite* grass1;
     cocos2d::Sprite* grass2;

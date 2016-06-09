@@ -61,12 +61,11 @@ bool GraphBack::init()
     
     /////////////////////////////
     // 3. add your codes below...
-    
     // add a label shows "Hello World"
     // create and initialize a label
     
     auto label = Label::createWithTTF("Hell World", "fonts/Marker Felt.ttf", 24);
-    
+
     // position the label on the center of the screen
     label->setPosition(Vec2(origin.x + visibleSize.width/2,
                             origin.y + visibleSize.height - label->getContentSize().height));
@@ -89,6 +88,7 @@ bool GraphBack::init()
     this->addChild(grass1, 0);
     this->addChild(grass2, 0);
     this->addChild(grass3, 0);
+    
 
     
     this->scheduleUpdate();

@@ -1,6 +1,6 @@
 #include "AppDelegate.h"
 #include "GraphBack.h"
-#include "HelloWorldScene.h"
+#include "WorldScene.h"
 
 
 USING_NS_CC;
@@ -77,8 +77,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
     register_all_packages();
 
     // create a scene. it's an autorelease object
-    // auto scene = GraphBack::createScene();
-    auto scene = HelloWorld::createScene();
+    auto scene = BWorld::createScene();
 
     // run
     director->runWithScene(scene);
