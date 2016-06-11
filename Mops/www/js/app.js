@@ -58,11 +58,11 @@ nottt.config(function($stateProvider, $urlRouterProvider) {
       }
     })
     .state('tab.note-detail', {
-      url: '/notes/:noteId',
+      url: '/notes/:noteId/:nname',
       views: {
         'tab-notes': {
           templateUrl: 'templates/note-detail.html',
-          controller: 'NotesDetailCtrl'
+          controller: 'NotesDetailCtrl as notdetc'
         }
       }
     })

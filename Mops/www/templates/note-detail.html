@@ -4,10 +4,30 @@
   The FriendsCtrl pulls data from the Friends service (service.js)
   The Friends service returns an array of friend data
 -->
-<ion-view view-title="{{note.note_name}}">
+<ion-view view-title="{{name}}">
   <ion-content>
-    <ion-item>
-      <ion-textarea>"{{note.note_text}}"</ion-textarea>
-    </ion-item>
+
+      <fieldset class="form-group">
+        <textarea class="form-group" title="text" ng-init='texts2=texts1' ng-model="texts2" ng-change="insert()"
+        rows='{{doc.description.length/50 + 1}}'
+        cols='50'></textarea>
+
+      </fieldset>
+  <h2>{{texts2}}</h2>
+  <h2>{{texts1}}</h2>
+  <ion-item ng-repeat="picture in pictures">
+    <h2>{{picture.pic_path}}</h2>
+    <img ng-src = "{{picture.pic_path}}">
+  </ion-item>
+</ion-item>
+    </div>
+    <div class="tabs tabs-icon-only">
+        <a class="tab-item">
+          <i class="icon ion-camera" ng-click="picture()"></i>
+        </a>
+        <a class="tab-item">
+          <i class="icon ion-mic-c" ng-click="audio()"></i>
+        </a>
+      </div>
   </ion-content>
 </ion-view>

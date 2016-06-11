@@ -4,9 +4,9 @@
   </ion-nav-buttons>
   <ion-content>
     <ion-list>
-      <ion-item ng-repeat="note in notes" href="#/tab/notes/{{note.id}}">
+      <ion-item ng-repeat="note in notes" href="#/tab/notes/{{note.id}}/{{note.note_name}}">
         <h2>{{note.note_name}}</h2>
-        <ion-option-button class="button-assertive" ng-click="remove(note)">
+        <ion-option-button class="button-assertive icon ion-trash-a" ng-click="delete(note);" >
         </ion-option-button>
       </ion-item>
     </ion-list>
