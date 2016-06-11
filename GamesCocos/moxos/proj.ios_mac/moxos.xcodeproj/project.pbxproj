@@ -94,6 +94,10 @@
 		FA62D1E71D0070770092AE60 /* EventKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA62D1E61D0070770092AE60 /* EventKitUI.framework */; };
 		FABF9ABD1CED30750049E338 /* bluegrass.png in Resources */ = {isa = PBXBuildFile; fileRef = FABF9ABC1CED30750049E338 /* bluegrass.png */; };
 		FABF9AC01CED41FB0049E338 /* pedobearspri.png in Resources */ = {isa = PBXBuildFile; fileRef = FABF9ABF1CED41FB0049E338 /* pedobearspri.png */; };
+		FACE37F01D0BCD3E0012D0CE /* trap.png in Resources */ = {isa = PBXBuildFile; fileRef = FACE37EE1D0BCD3E0012D0CE /* trap.png */; };
+		FACE37F11D0BCD3E0012D0CE /* queen.png in Resources */ = {isa = PBXBuildFile; fileRef = FACE37EF1D0BCD3E0012D0CE /* queen.png */; };
+		FACE37F21D0BCD450012D0CE /* trap.png in Resources */ = {isa = PBXBuildFile; fileRef = FACE37EE1D0BCD3E0012D0CE /* trap.png */; };
+		FACE37F31D0BCD450012D0CE /* queen.png in Resources */ = {isa = PBXBuildFile; fileRef = FACE37EF1D0BCD3E0012D0CE /* queen.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -203,6 +207,8 @@
 		FA62D1E61D0070770092AE60 /* EventKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKitUI.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/EventKitUI.framework; sourceTree = DEVELOPER_DIR; };
 		FABF9ABC1CED30750049E338 /* bluegrass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bluegrass.png; sourceTree = "<group>"; };
 		FABF9ABF1CED41FB0049E338 /* pedobearspri.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pedobearspri.png; sourceTree = "<group>"; };
+		FACE37EE1D0BCD3E0012D0CE /* trap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trap.png; sourceTree = "<group>"; };
+		FACE37EF1D0BCD3E0012D0CE /* queen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = queen.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -328,6 +334,8 @@
 		46880B7519C43A67006E1F66 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				FACE37EE1D0BCD3E0012D0CE /* trap.png */,
+				FACE37EF1D0BCD3E0012D0CE /* queen.png */,
 				FA62D1C21CFE8AA70092AE60 /* bear1.png */,
 				FA62D1C31CFE8AA70092AE60 /* bear2.png */,
 				FA62D1C41CFE8AA70092AE60 /* bear3.png */,
@@ -519,8 +527,10 @@
 				46880B7D19C43A67006E1F66 /* CloseSelected.png in Resources */,
 				5087E77D17EB970100C73F5D /* Default-568h@2x.png in Resources */,
 				FA62D1CA1CFE8AA70092AE60 /* bear1.png in Resources */,
+				FACE37F11D0BCD3E0012D0CE /* queen.png in Resources */,
 				FA62D1CF1CFE8AA70092AE60 /* bear6.png in Resources */,
 				5087E78517EB970100C73F5D /* Icon-72.png in Resources */,
+				FACE37F01D0BCD3E0012D0CE /* trap.png in Resources */,
 				521A8E6519F0C34300D177D7 /* Default-736h@3x.png in Resources */,
 				521A8EA919F11F5000D177D7 /* fonts in Resources */,
 				50EF62A317ECD613001EB2F8 /* Icon-50.png in Resources */,
@@ -548,6 +558,7 @@
 			files = (
 				FA62D1DE1CFFC20C0092AE60 /* bear6.png in Resources */,
 				FA62D1DD1CFFC20C0092AE60 /* bear5.png in Resources */,
+				FACE37F21D0BCD450012D0CE /* trap.png in Resources */,
 				FA62D1DC1CFFC2040092AE60 /* bear4.png in Resources */,
 				FA62D1DB1CFFC2020092AE60 /* bear3.png in Resources */,
 				FA62D1DA1CFFC1FF0092AE60 /* bear2.png in Resources */,
@@ -557,6 +568,7 @@
 				FA62D1E21CFFC20C0092AE60 /* bluegrass.png in Resources */,
 				3EACC99019EE6D4300EB3C5E /* res in Resources */,
 				FA62D1D91CFFC1FC0092AE60 /* bear1.png in Resources */,
+				FACE37F31D0BCD450012D0CE /* queen.png in Resources */,
 				FA62D1E01CFFC20C0092AE60 /* bear8.png in Resources */,
 				521A8EAA19F11F5000D177D7 /* fonts in Resources */,
 				FA62D1E31CFFC2110092AE60 /* Pinkie_Pie.png in Resources */,

@@ -36,9 +36,15 @@ bool BWorld::init()
     
     Size visibleSize = Director::getInstance()->getVisibleSize();
     Vec2 origin = Director::getInstance()->getVisibleOrigin();
-    
+    this->schedule( schedule_selector(BWorld::gameLogic), 1.0 );
+
     
     return true;
+}
+
+void BWorld::gameLogic(float dt)
+{
+    this->AddMonster();
 }
 
 
@@ -231,4 +237,48 @@ void BWorld::update(float delta){
         position3.x = this->getBoundingBox().getMaxX() + grass3->getBoundingBox().size.width/2;
     grass3->setPosition(position3);
     
+}
+
+
+
+void BWorld::AddMonster() {
+    
+    auto visibleSize = Director::getInstance()->getVisibleSize();
+    //monster = "queen.png"];
+    //trap = "trap.png"];
+    target = Sprite::create("queen.png" );
+    
+    // Determine where to spawn the target along the Y axis
+    int minY = visibleSize.height/2;
+    int maxY = visibleSize.height - target->getContentSize().height/2;
+    int rangeY = maxY - minY;
+    // srand( TimGetTicks() );
+    int actualY = ( rand() % rangeY ) + minY;
+    
+    // Create the target slightly off-screen along the right edge,
+    // and along a random position along the Y axis as calculated
+    target->setPosition( ccp(visibleSize.width + (target->getContentSize().width/2),actualY) );
+    this->addChild(target);
+    
+    // Determine speed of the target
+    int minDuration = (int)2.0;
+    int maxDuration = (int)4.0;
+    int rangeDuration = maxDuration - minDuration;
+    // srand( TimGetTicks() );
+    int actualDuration = ( rand() % rangeDuration )
+    + minDuration;
+    
+    // Create the actions
+    CCFiniteTimeAction* actionMove = CCMoveTo::create( (float)actualDuration,
+                     ccp(0 - target->getContentSize().width/2, actualY) );
+    CCFiniteTimeAction* actionMoveDone = CCCallFuncN::create( this, callfuncN_selector(BWorld::spriteMoveFinished));
+    target->runAction( CCSequence::create(actionMove,
+                                          actionMoveDone, NULL) );
+}
+
+// cpp with cocos2d-x
+void BWorld::spriteMoveFinished(CCNode* sender)
+{
+    CCSprite *sprite = (CCSprite *)sender;
+    this->removeChild(sprite, true);
 }

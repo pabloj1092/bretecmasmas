@@ -11,7 +11,9 @@ public:
     virtual bool init();
     void AddBear();
     void AddBack();
-
+    void AddMonster();
+    void gameLogic(float dt);
+    void spriteMoveFinished(cocos2d::CCNode* sender);
 
     // a selector callback
     void menuCloseCallback(cocos2d::Ref* pSender);
@@ -36,6 +38,8 @@ private:
     cocos2d::Sprite* grass1; //Blue grass
     cocos2d::Sprite* grass2;
     cocos2d::Sprite* grass3;
+    cocos2d::Sprite* target;
+
 };
 
 #endif // __WORLD_SCENE_H__
