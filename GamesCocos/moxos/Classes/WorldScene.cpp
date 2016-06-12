@@ -36,7 +36,6 @@ bool BWorld::init()
     
     Size visibleSize = Director::getInstance()->getVisibleSize();
     Vec2 origin = Director::getInstance()->getVisibleOrigin();
-    this->schedule( schedule_selector(BWorld::gameLogic), 1.0 );
 
     
     return true;
@@ -62,11 +61,15 @@ void  BWorld::AddBear()
     
     // create and initialize a label
 
-    
+    auto physicsBody = PhysicsBody::createBox(Size(65.0f, 81.0f), PhysicsMaterial(0.1f, 1.0f, 0.0f));
+    physicsBody->setDynamic(false);
+  
     amySprite = Sprite::create("bear1.png");
     
     amySprite->setPosition(Vec2((visibleSize.width/6)+origin.x, (visibleSize.height/5)+origin.y));
-    amySprite->setScale(0.1);
+    amySprite->setScale(0.08);
+    amySprite->setPhysicsBody(physicsBody);
+
 
     Vector<SpriteFrame*> animFrames;
     animFrames.reserve(8);
@@ -107,18 +110,18 @@ void  BWorld::AddBear()
 
 void BWorld::onKeyPressed(EventKeyboard::KeyCode keyCode, Event* event)
 {
-    auto jump = JumpBy::create(0.7, Vec2(0, 0), 200, 1);
+    auto jump = JumpBy::create(0.9, Vec2(0, 0), 50, 1);
     
     
     Vec2 loc = event->getCurrentTarget()->getPosition();
     switch(keyCode){
         case EventKeyboard::KeyCode::KEY_LEFT_ARROW:
         case EventKeyboard::KeyCode::KEY_A:
-            event->getCurrentTarget()->setPosition(--loc.x,loc.y);
+            event->getCurrentTarget()->setPosition(loc.x-5,loc.y);
             break;
         case EventKeyboard::KeyCode::KEY_RIGHT_ARROW:
         case EventKeyboard::KeyCode::KEY_D:
-            event->getCurrentTarget()->setPosition(++loc.x,loc.y);
+            event->getCurrentTarget()->setPosition(loc.x+5,loc.y);
             break;
         case EventKeyboard::KeyCode::KEY_UP_ARROW:
         case EventKeyboard::KeyCode::KEY_W:
@@ -212,7 +215,11 @@ void BWorld::AddBack()
     this->addChild(grass2, 0);
     this->addChild(grass3, 0);
 
+    
+    this->schedule( schedule_selector(BWorld::gameLogic), 4.0 );
+
     this->scheduleUpdate();
+    
 }
 
 
@@ -247,9 +254,10 @@ void BWorld::AddMonster() {
     //monster = "queen.png"];
     //trap = "trap.png"];
     target = Sprite::create("queen.png" );
+    target->setScale(0.5);
     
     // Determine where to spawn the target along the Y axis
-    int minY = visibleSize.height/2;
+    int minY = visibleSize.height/10;
     int maxY = visibleSize.height - target->getContentSize().height/2;
     int rangeY = maxY - minY;
     // srand( TimGetTicks() );
@@ -262,7 +270,7 @@ void BWorld::AddMonster() {
     
     // Determine speed of the target
     int minDuration = (int)2.0;
-    int maxDuration = (int)4.0;
+    int maxDuration = (int)3.5;
     int rangeDuration = maxDuration - minDuration;
     // srand( TimGetTicks() );
     int actualDuration = ( rand() % rangeDuration )
