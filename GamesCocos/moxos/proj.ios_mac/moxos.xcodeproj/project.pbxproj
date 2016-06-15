@@ -77,7 +77,6 @@
 		FA62D1CF1CFE8AA70092AE60 /* bear6.png in Resources */ = {isa = PBXBuildFile; fileRef = FA62D1C71CFE8AA70092AE60 /* bear6.png */; };
 		FA62D1D01CFE8AA70092AE60 /* bear7.png in Resources */ = {isa = PBXBuildFile; fileRef = FA62D1C81CFE8AA70092AE60 /* bear7.png */; };
 		FA62D1D11CFE8AA70092AE60 /* bear8.png in Resources */ = {isa = PBXBuildFile; fileRef = FA62D1C91CFE8AA70092AE60 /* bear8.png */; };
-		FA62D1D51CFFB63D0092AE60 /* GraphBack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA3C912D1CDEF696004DC02F /* GraphBack.cpp */; };
 		FA62D1D81CFFC0E90092AE60 /* WorldScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 46880B8619C43A87006E1F66 /* WorldScene.cpp */; };
 		FA62D1D91CFFC1FC0092AE60 /* bear1.png in Resources */ = {isa = PBXBuildFile; fileRef = FA62D1C21CFE8AA70092AE60 /* bear1.png */; };
 		FA62D1DA1CFFC1FF0092AE60 /* bear2.png in Resources */ = {isa = PBXBuildFile; fileRef = FA62D1C31CFE8AA70092AE60 /* bear2.png */; };
@@ -98,6 +97,8 @@
 		FACE37F11D0BCD3E0012D0CE /* queen.png in Resources */ = {isa = PBXBuildFile; fileRef = FACE37EF1D0BCD3E0012D0CE /* queen.png */; };
 		FACE37F21D0BCD450012D0CE /* trap.png in Resources */ = {isa = PBXBuildFile; fileRef = FACE37EE1D0BCD3E0012D0CE /* trap.png */; };
 		FACE37F31D0BCD450012D0CE /* queen.png in Resources */ = {isa = PBXBuildFile; fileRef = FACE37EF1D0BCD3E0012D0CE /* queen.png */; };
+		FACE37F61D0D09A10012D0CE /* GameOverScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FACE37F41D0D09A10012D0CE /* GameOverScene.cpp */; };
+		FACE37F71D0D09A10012D0CE /* GameOverScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FACE37F41D0D09A10012D0CE /* GameOverScene.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -193,8 +194,6 @@
 		ED545A7B1B68A1F400C3958E /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.4.sdk/usr/lib/libiconv.dylib; sourceTree = DEVELOPER_DIR; };
 		ED545A7D1B68A1FA00C3958E /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
 		FA3C91221CDEF43F004DC02F /* Pinkie_Pie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Pinkie_Pie.png; sourceTree = "<group>"; };
-		FA3C912D1CDEF696004DC02F /* GraphBack.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GraphBack.cpp; path = ../Classes/GraphBack.cpp; sourceTree = SOURCE_ROOT; };
-		FA3C912E1CDEF696004DC02F /* GraphBack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GraphBack.h; path = ../Classes/GraphBack.h; sourceTree = SOURCE_ROOT; };
 		FA62D1C21CFE8AA70092AE60 /* bear1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bear1.png; sourceTree = "<group>"; };
 		FA62D1C31CFE8AA70092AE60 /* bear2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bear2.png; sourceTree = "<group>"; };
 		FA62D1C41CFE8AA70092AE60 /* bear3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bear3.png; sourceTree = "<group>"; };
@@ -209,6 +208,8 @@
 		FABF9ABF1CED41FB0049E338 /* pedobearspri.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pedobearspri.png; sourceTree = "<group>"; };
 		FACE37EE1D0BCD3E0012D0CE /* trap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trap.png; sourceTree = "<group>"; };
 		FACE37EF1D0BCD3E0012D0CE /* queen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = queen.png; sourceTree = "<group>"; };
+		FACE37F41D0D09A10012D0CE /* GameOverScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameOverScene.cpp; sourceTree = "<group>"; };
+		FACE37F51D0D09A10012D0CE /* GameOverScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameOverScene.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -362,10 +363,10 @@
 			children = (
 				46880B8419C43A87006E1F66 /* AppDelegate.cpp */,
 				46880B8519C43A87006E1F66 /* AppDelegate.h */,
-				46880B8619C43A87006E1F66 /* WorldScene.cpp */,
 				46880B8719C43A87006E1F66 /* WorldScene.h */,
-				FA3C912D1CDEF696004DC02F /* GraphBack.cpp */,
-				FA3C912E1CDEF696004DC02F /* GraphBack.h */,
+				46880B8619C43A87006E1F66 /* WorldScene.cpp */,
+				FACE37F51D0D09A10012D0CE /* GameOverScene.h */,
+				FACE37F41D0D09A10012D0CE /* GameOverScene.cpp */,
 			);
 			name = Classes;
 			path = ../Classes;
@@ -589,6 +590,7 @@
 				FA62D1D81CFFC0E90092AE60 /* WorldScene.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
+				FACE37F61D0D09A10012D0CE /* GameOverScene.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -598,8 +600,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				46880B8919C43A87006E1F66 /* AppDelegate.cpp in Sources */,
-				FA62D1D51CFFB63D0092AE60 /* GraphBack.cpp in Sources */,
 				503AE10517EB98FF00D1A890 /* main.cpp in Sources */,
+				FACE37F71D0D09A10012D0CE /* GameOverScene.cpp in Sources */,
 				46880B8B19C43A87006E1F66 /* WorldScene.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

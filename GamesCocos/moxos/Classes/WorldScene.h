@@ -39,6 +39,8 @@ private:
     cocos2d::Sprite* grass2;
     cocos2d::Sprite* grass3;
     cocos2d::Sprite* target;
+    cocos2d::CCArray *_targets;
+    cocos2d::CCArray *_projectiles;
 
 };
 
