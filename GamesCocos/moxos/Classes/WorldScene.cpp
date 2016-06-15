@@ -6,7 +6,7 @@ USING_NS_CC;
 Scene* BWorld::createScene()
 {
     // 'scene' is an autorelease object
-    auto scene = Scene::create();
+    auto scene = Scene::createWithPhysics();
 
     // 'layer' is an autorelease object
     auto layer1 = BWorld::create();
@@ -61,14 +61,12 @@ void  BWorld::AddBear()
     
     // create and initialize a label
 
-    auto physicsBody = PhysicsBody::createBox(Size(65.0f, 81.0f), PhysicsMaterial(0.1f, 1.0f, 0.0f));
-    physicsBody->setDynamic(false);
+    //physicsBody->setDynamic(false);
   
     amySprite = Sprite::create("bear1.png");
     
     amySprite->setPosition(Vec2((visibleSize.width/6)+origin.x, (visibleSize.height/5)+origin.y));
     amySprite->setScale(0.08);
-    amySprite->setPhysicsBody(physicsBody);
 
 
     Vector<SpriteFrame*> animFrames;
@@ -94,6 +92,10 @@ void  BWorld::AddBear()
     auto jump = JumpBy::create(0.5, Vec2(0, 0), 300, 1);
 
     amySprite->runAction(jump);
+   
+    auto physicsBody = PhysicsBody::createBox(Size(65.0f, 81.0f), PhysicsMaterial(0.1f, 1.0f, 0.0f));
+physicsBody->setDynamic(false);
+    amySprite->setPhysicsBody(physicsBody);
 
 
     auto eventListener = EventListenerKeyboard::create();
@@ -210,6 +212,12 @@ void BWorld::AddBack()
     grass3 = Sprite::create("bluegrass.png");
     grass3->setPosition(this->getBoundingBox().getMidX() + 2*grass2->getBoundingBox().size.width, origin.y + grass3->getContentSize().height/2 );
 
+    auto physicsBody = PhysicsBody::createBox(Size(65.0f, 81.0f), PhysicsMaterial(0.1f, 1.0f, 0.0f));
+    physicsBody->setDynamic(false);
+    grass1->setPhysicsBody(physicsBody);
+    
+    
+    
     this->addChild(bgnd, 0);
     this->addChild(grass1, 0);
     this->addChild(grass2, 0);

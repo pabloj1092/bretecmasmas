@@ -97,8 +97,6 @@
 		FACE37F11D0BCD3E0012D0CE /* queen.png in Resources */ = {isa = PBXBuildFile; fileRef = FACE37EF1D0BCD3E0012D0CE /* queen.png */; };
 		FACE37F21D0BCD450012D0CE /* trap.png in Resources */ = {isa = PBXBuildFile; fileRef = FACE37EE1D0BCD3E0012D0CE /* trap.png */; };
 		FACE37F31D0BCD450012D0CE /* queen.png in Resources */ = {isa = PBXBuildFile; fileRef = FACE37EF1D0BCD3E0012D0CE /* queen.png */; };
-		FACE37F61D0D09A10012D0CE /* GameOverScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FACE37F41D0D09A10012D0CE /* GameOverScene.cpp */; };
-		FACE37F71D0D09A10012D0CE /* GameOverScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FACE37F41D0D09A10012D0CE /* GameOverScene.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -208,8 +206,6 @@
 		FABF9ABF1CED41FB0049E338 /* pedobearspri.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pedobearspri.png; sourceTree = "<group>"; };
 		FACE37EE1D0BCD3E0012D0CE /* trap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trap.png; sourceTree = "<group>"; };
 		FACE37EF1D0BCD3E0012D0CE /* queen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = queen.png; sourceTree = "<group>"; };
-		FACE37F41D0D09A10012D0CE /* GameOverScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameOverScene.cpp; sourceTree = "<group>"; };
-		FACE37F51D0D09A10012D0CE /* GameOverScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameOverScene.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -365,8 +361,6 @@
 				46880B8519C43A87006E1F66 /* AppDelegate.h */,
 				46880B8719C43A87006E1F66 /* WorldScene.h */,
 				46880B8619C43A87006E1F66 /* WorldScene.cpp */,
-				FACE37F51D0D09A10012D0CE /* GameOverScene.h */,
-				FACE37F41D0D09A10012D0CE /* GameOverScene.cpp */,
 			);
 			name = Classes;
 			path = ../Classes;
@@ -590,7 +584,6 @@
 				FA62D1D81CFFC0E90092AE60 /* WorldScene.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
-				FACE37F61D0D09A10012D0CE /* GameOverScene.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -601,7 +594,6 @@
 			files = (
 				46880B8919C43A87006E1F66 /* AppDelegate.cpp in Sources */,
 				503AE10517EB98FF00D1A890 /* main.cpp in Sources */,
-				FACE37F71D0D09A10012D0CE /* GameOverScene.cpp in Sources */,
 				46880B8B19C43A87006E1F66 /* WorldScene.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
